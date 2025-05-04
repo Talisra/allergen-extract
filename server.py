@@ -77,4 +77,3 @@ async def extract_allergens(request: UrlRequest, scraper: BSoupRecipeScraper = D
             detail=f"Error processing URL: {str(e)}"
         )
 
-# To run: uvicorn server:app --reload
