@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    min-height: 100vh;
+    height: 100%;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .panel {
+    background: rgba(255, 248, 217, 0.95);
+    border-radius: 18px;
+    border-style: outset;
+    box-shadow: 0 6px 32px rgba(60, 100, 150, 0.18);
+    padding: 2.5rem 2rem 2rem 2rem;
+    min-width: 340px;
+    max-width: 98vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    margin-top: 0;
+    font-weight: 700;
+    color: #234;
+    letter-spacing: 1px;
+  }
+  form {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  input[type="url"] {
+    width: 80%;
+    padding: 0.7rem;
+    border: 1px solid #bcd;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border 0.2s;
+  }
+  input[type="url"]:focus {
+    border: 1.5px solid #6ab7ff;
+  }
+  button {
+    padding: 0.7rem 2.2rem;
+    font-size: 1.07rem;
+    border: none;
+    border-radius: 8px;
+    background: #ffa600;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  button:hover {
+    background: #ffba39;
+  }
+  .allergens-list {
+    margin-top: 1.5rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 1.3rem;
+    color: #d7263d;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
