@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from validators import url as validate_url 
-from scraper import BSoupRecipeScraper
-from ai_client import AzureAIClient
+from src.scraper import BSoupRecipeScraper
+from src.ai_client import AzureAIClient
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi import FastAPI, HTTPException

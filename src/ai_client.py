@@ -1,11 +1,11 @@
 from langchain_openai import AzureChatOpenAI
 from pydantic import BaseModel, Field
-from config import azure_config
+from config.config import azure_config
 from typing import List
 from abc import ABC, abstractmethod
 import yaml
 
-with open('config.yaml', 'r') as f:
+with open('config/config.yaml', 'r') as f:
     config = yaml.safe_load(f)
 
 class AllergenInfo(BaseModel):

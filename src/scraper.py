@@ -3,11 +3,11 @@ from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 from bs4 import BeautifulSoup
 from abc import ABC, abstractmethod
-from sites import SiteRegistry
+from src.sites import SiteRegistry
 from urllib.parse import urlparse
 import yaml
 
-with open('config.yaml', 'r') as f:
+with open('config/config.yaml', 'r') as f:
     config = yaml.safe_load(f)
 
 class AbstractScraper(ABC):
