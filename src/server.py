@@ -57,10 +57,11 @@ async def extract_allergens(request: UrlRequest, scraper: BSoupRecipeScraper = D
 
         scraper = BSoupRecipeScraper()
         ai_client = AzureAIClient()
-        scraped_data = scraper.scrape("https://www.allrecipes.com/recipe/46822/indian-chicken-curry-ii/")
-
-        ai_result = ai_client.extract_allergens(scraped_data['ingredients'])
-
+        scraped_data = scraper.scrape(request.url)
+        if scraped_data['status'] == 'success':
+            ai_result = ai_client.extract_allergens(scraped_data['ingredients'])
+        else:
+            raise RuntimeError("A problem occured within the scrapper!")
         return {
             "status": "success",
             "url": request.url,

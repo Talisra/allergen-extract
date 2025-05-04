@@ -19,7 +19,7 @@ document.getElementById('recipe-form').addEventListener('submit', async function
             "</span>";
         }
       } else {
-        allergensDiv.textContent = "No allergens found or error in response.";
+        allergensDiv.textContent = "An error was occured! re-check that the url is valid!";
       }
     } catch (err) {
       allergensDiv.textContent = "Error: " + err;
