@@ -55,8 +55,6 @@ async def extract_allergens(request: UrlRequest, scraper: BSoupRecipeScraper = D
         if not validate_url(request.url):
             raise ValueError("Invalid URL format")
 
-        scraper = BSoupRecipeScraper()
-        ai_client = AzureAIClient()
         scraped_data = scraper.scrape(request.url)
         if scraped_data['status'] == 'success':
             ai_result = ai_client.extract_allergens(scraped_data['ingredients'])
